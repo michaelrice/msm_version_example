@@ -1,0 +1,276 @@
+meta:
+  Author: ""
+  CodeSource: ""
+  Color: green
+  Copyright: ""
+  Description: ""
+  DisplayName: Demo of Multi-Site Manager
+  DocUrl: ""
+  Documentation: ""
+  Icon: chess rook
+  License: ""
+  Name: multi-site-demo
+  Order: ""
+  Prerequisites: drp-community-content,task-library
+  RequiredFeatures: ""
+  Source: ""
+  Tags: ""
+  Type: dynamic
+  Version: v1.0.2
+sections:
+  version_sets:
+    credential:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Description: DRP Credentials
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: credential
+      Meta:
+        icon: key
+      Params: {}
+      Prefs:
+        baseTokenSecret: vO2rN6y2LvIddPde69t23ECy0SubKdoa
+        completeJobsPurgedAfter: never
+        failedJobsPurgedAfter: never
+        jobsToKeep: "50"
+        knownTokenTimeout: "3600"
+        systemGrantorSecret: 6gLiRRS3jGyhO5fqXtU9MTOTXCZp9lx6
+        unknownTokenTimeout: "600"
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    license:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: rackn-license
+        Type: ContentPackage
+        Version: tip
+      Description: RackN License
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: license
+      Meta:
+        icon: law
+      Params: {}
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    manager-ignore:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: multi-site-demo
+        Type: ContentPackage
+        Version: ignore
+      - Name: rackn-catalog
+        Type: ContentPackage
+        Version: ignore
+      - Name: docker-context
+        Type: PluginProvider
+        Version: ignore
+      - Name: manager
+        Type: PluginProvider
+        Version: ignore
+      Description: DRP Manager Only Items
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: manager-ignore
+      Meta:
+        icon: chess rook
+      Params: {}
+      Plugins:
+      - Name: docker-context
+        Provider: docker-context
+      - Name: manager
+        Provider: manager
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    manager-stable:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: multi-site-demo
+        Type: ContentPackage
+        Version: ignore
+      - Name: rackn-catalog
+        Type: ContentPackage
+        Version: ignore
+      - Name: docker-context
+        Type: PluginProvider
+        Version: ignore
+      - Name: manager
+        Type: PluginProvider
+        Version: stable
+      Description: DRP Manager Only Items
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: manager-stable
+      Meta:
+        icon: chess rook
+      Params: {}
+      Plugins:
+      - Name: docker-context
+        Provider: docker-context
+      - Name: manager
+        Provider: manager
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    manager-tip:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: multi-site-demo
+        Type: ContentPackage
+        Version: ignore
+      - Name: rackn-catalog
+        Type: ContentPackage
+        Version: ignore
+      - Name: docker-context
+        Type: PluginProvider
+        Version: ignore
+      - Name: manager
+        Type: PluginProvider
+        Version: tip
+      Description: DRP Manager Only Items
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: manager-tip
+      Meta:
+        icon: chess rook
+      Params: {}
+      Plugins:
+      - Name: docker-context
+        Provider: docker-context
+      - Name: manager
+        Provider: manager
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    site-base-stable:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: drp-community-content
+        Type: ContentPackage
+        Version: stable
+      - Name: task-library
+        Type: ContentPackage
+        Version: stable
+      - Name: krib
+        Type: ContentPackage
+        Version: stable
+      - Name: certs
+        Type: PluginProvider
+        Version: stable
+      - Name: ux-views
+        Type: PluginProvider
+        Version: stable
+      DRPVersion: stable
+      Description: Core Components needed by all Sites
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: site-base-stable
+      Meta:
+        icon: paw
+      Params: {}
+      Plugins:
+      - Name: certs
+        Provider: certs
+      Prefs:
+        defaultBootEnv: local
+        defaultStage: none
+        defaultWorkflow: discover
+        unknownBootEnv: discovery
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    site-base-tip:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: drp-community-content
+        Type: ContentPackage
+        Version: tip
+      - Name: task-library
+        Type: ContentPackage
+        Version: tip
+      - Name: krib
+        Type: ContentPackage
+        Version: tip
+      - Name: certs
+        Type: PluginProvider
+        Version: tip
+      DRPVersion: tip
+      Description: Core Components needed by all Sites
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: site-base-tip
+      Meta:
+        icon: paw
+      Params: {}
+      Plugins:
+      - Name: certs
+        Provider: certs
+      Prefs:
+        defaultBootEnv: local
+        defaultStage: none
+        defaultWorkflow: discover
+        unknownBootEnv: discovery
+      ReadOnly: false
+      Type: version_sets
+      Validated: false
+    site-base-v4.2.0:
+      Apply: true
+      Available: false
+      Bundle: ""
+      Components:
+      - Name: drp-community-content
+        Type: ContentPackage
+        Version: stable
+      - Name: task-library
+        Type: ContentPackage
+        Version: v4.2.0
+      - Name: krib
+        Type: ContentPackage
+        Version: v4.2.0
+      - Name: certs
+        Type: PluginProvider
+        Version: v4.2.0
+      DRPVersion: v4.2.0
+      Description: Core Components needed by all Sites
+      Documentation: ""
+      Endpoint: ""
+      Errors: []
+      Id: site-base-v4.2.0
+      Meta:
+        icon: paw
+      Params: {}
+      Plugins:
+      - Name: certs
+        Provider: certs
+      Prefs:
+        defaultBootEnv: local
+        defaultStage: none
+        defaultWorkflow: discover-linode
+        unknownBootEnv: discovery
+      ReadOnly: false
+      Type: version_sets
+      Validated: false

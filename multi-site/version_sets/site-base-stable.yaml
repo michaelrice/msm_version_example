@@ -1,0 +1,31 @@
+---
+Id: site-base-stable
+Description: "Core Components needed by all Sites"
+Apply: true
+Meta:
+  icon: paw
+DRPVersion: stable
+Components:
+- Name: drp-community-content
+  Type: ContentPackage
+  Version: stable
+- Name: task-library
+  Type: ContentPackage
+  Version: stable
+- Name: krib
+  Type: ContentPackage
+  Version: stable
+- Name: certs
+  Type: PluginProvider
+  Version: stable
+- Name: ux-views
+  Type: PluginProvider
+  Version: stable
+Plugins:
+- Name: certs
+  Provider: certs
+Prefs:
+  defaultBootEnv: local
+  defaultStage: none
+  defaultWorkflow: discover
+  unknownBootEnv: discovery
